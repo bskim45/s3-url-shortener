@@ -1,5 +1,10 @@
 # s3-url-shortener
 
+[![](https://images.microbadger.com/badges/image/bskim45/s3-url-shortener.svg)](https://microbadger.com/images/bskim45/s3-url-shortener "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/bskim45/s3-url-shortener.svg)](https://microbadger.com/images/bskim45/s3-url-shortener "Get your own version badge on microbadger.com")
+[![Docker Stars](https://img.shields.io/docker/stars/bskim45/s3-url-shortener.svg?style=flat)](https://hub.docker.com/r/bskim45/s3-url-shortener/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bskim45/s3-url-shortener.svg)]()
+
 Super simple flask-based URL shortener leveraging AWS S3
 
 ## Background
