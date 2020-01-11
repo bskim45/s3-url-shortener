@@ -1,0 +1,18 @@
+.git/
+
+### Python
+*.pyc
+__pycache__
+
+.env
+venv/
+.python-version
+
+docker-compose*.yaml
+
+deploy
+
+### Platform
+.DS_Store
+Thumbs.db
+Desktop.ini

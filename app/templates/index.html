@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='bootstrap-4.4.1.min.css') }}"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+  <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <meta name="theme-color" content="#563d7c">
+</head>
+<body class="d-flex flex-column h-100">
+<header class="fixed-top d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <a class="h5 my-0 mr-md-auto text-dark text-decoration-none font-weight-normal" href="/">URL Shortener</a>
+{#  <nav class="my-2 my-md-0 mr-md-3">#}
+{#    <a class="p-2 text-dark" href="/">Shorten</a>#}
+    {#    <a class="p-2 text-dark" href="#">List</a>#}
+{#  </nav>#}
+</header>
+<div class="cover-container d-flex p-3 mx-auto flex-column text-center">
+  <main role="main" class="cover">
+    <h2>URL shortener</h2>
+    <form action="/create">
+      <div class="form-create">
+        <div class="form-group">
+          <label for="url">Enter URL to shorten</label>
+          <input type="url" class="form-control" id="url"
+                 placeholder="https://google.com"
+                 autofocus required>
+        </div>
+
+        <div class="form-group">
+          <label for="alias">(Optional) URL alias (ex.
+            yourdomain.com/hello)</label>
+          <input type="text" class="form-control" id="alias"
+                 placeholder="hello">
+        </div>
+      </div>
+      <div id="message" class="alert alert-primary"></div>
+      <input class="btn btn-lg btn-primary" type="submit" value="Shorten link">
+    </form>
+  </main>
+</div>
+
+<footer class="footer mt-auto py-2 py-md-3 text-muted fixed-bottom">
+  <div class="container">
+    <p class="d-flex flex-wrap justify-content-between">
+      <span class="mr-auto">&copy 2020 <a href="https://bsk.im">Bumsoo Kim</a></span>
+      <a href="https://github.com/bskim45/s3-url-shortener">
+        <span class="d-none d-sm-inline">View this project on </span>Github </a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

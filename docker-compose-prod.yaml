@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    image: bskim45/s3-url-shortener:latest
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - APP_MODULE=app:create_app()
+      - AWS_ACCESS_KEY_ID=__ACCESS_KEY__
+      - AWS_SECRET_ACCESS_KEY=__SECRET__
+      - S3_REGION=us-west-2
+      - S3_BUCKET=__S3_BUCKET__
+      - SHORT_DOMAIN=https://example.com
